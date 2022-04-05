@@ -185,7 +185,7 @@ dependencies = [
  "jsonrpc-pubsub",
  "local-runtime",
  "log",
- "pallet-block-reward 2.0.0",
+ "pallet-block-reward",
  "pallet-contracts-rpc",
  "pallet-ethereum",
  "pallet-evm",
@@ -261,7 +261,7 @@ dependencies = [
  "pallet-authorship",
  "pallet-balances",
  "pallet-base-fee",
- "pallet-block-reward 2.0.0",
+ "pallet-block-reward",
  "pallet-collator-selection 3.0.0 (git+https://github.com/AstarNetwork/astar-frame?branch=polkadot-v0.9.17)",
  "pallet-collective",
  "pallet-custom-signatures",
@@ -4393,7 +4393,7 @@ dependencies = [
  "libp2p-core",
  "libp2p-swarm",
  "log",
- "lru 0.7.4",
+ "lru 0.7.5",
  "rand 0.7.3",
  "smallvec",
  "unsigned-varint 0.7.1",
@@ -4619,7 +4619,7 @@ dependencies = [
  "pallet-aura",
  "pallet-balances",
  "pallet-base-fee",
- "pallet-block-reward 2.0.0",
+ "pallet-block-reward",
  "pallet-contracts",
  "pallet-contracts-primitives",
  "pallet-contracts-rpc-runtime-api",
@@ -4634,7 +4634,7 @@ dependencies = [
  "pallet-evm-precompile-simple",
  "pallet-evm-precompile-sr25519",
  "pallet-grandpa",
- "pallet-precompile-dapps-staking",
+ "pallet-precompile-dapps-staking 3.2.0",
  "pallet-randomness-collective-flip",
  "pallet-sudo",
  "pallet-timestamp",
@@ -4699,9 +4699,9 @@ dependencies = [
 
 [[package]]
 name = "lru"
-version = "0.7.4"
+version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22e8810f0ab5b02d4fc737c818258c8560a3216b7ebd5fd756cb437e23157fc6"
+checksum = "32613e41de4c47ab04970c348ca7ae7382cf116625755af070b008a15516a889"
 dependencies = [
  "hashbrown 0.11.2",
 ]
@@ -5525,17 +5525,6 @@ dependencies = [
 
 [[package]]
 name = "pallet-block-reward"
-version = "0.2.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-block-reward-0.2.0/polkadot-v0.9.17#162d8fcde709d0140bc8da9f7df5ac165c0c43a7"
-dependencies = [
- "frame-support",
- "frame-system",
- "parity-scale-codec",
- "scale-info",
-]
-
-[[package]]
-name = "pallet-block-reward"
 version = "2.0.0"
 source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-block-reward-2.0.0/polkadot-v0.9.17#33e48c2e54109bb5980f8117336c9489f9c20d06"
 dependencies = [
@@ -5790,29 +5779,6 @@ dependencies = [
 
 [[package]]
 name = "pallet-dapps-staking"
-version = "3.1.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.1.0/polkadot-v0.9.17#162d8fcde709d0140bc8da9f7df5ac165c0c43a7"
-dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "num-traits",
- "pallet-balances",
- "pallet-session",
- "pallet-timestamp",
- "parity-scale-codec",
- "scale-info",
- "serde",
- "sp-arithmetic",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-std",
-]
-
-[[package]]
-name = "pallet-dapps-staking"
 version = "3.2.0"
 source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.2.0/polkadot-v0.9.17#33e48c2e54109bb5980f8117336c9489f9c20d06"
 dependencies = [
@@ -5837,6 +5803,7 @@ dependencies = [
 [[package]]
 name = "pallet-dapps-staking"
 version = "3.2.1"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -6283,6 +6250,7 @@ dependencies = [
 [[package]]
 name = "pallet-precompile-dapps-staking"
 version = "3.2.1"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
 dependencies = [
  "fp-evm",
  "frame-support",
@@ -6292,7 +6260,7 @@ dependencies = [
  "pallet-dapps-staking 3.2.1",
  "pallet-evm",
  "parity-scale-codec",
- "precompile-utils 0.1.0",
+ "precompile-utils 0.1.0 (git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade)",
  "scale-info",
  "sp-core",
  "sp-runtime",
@@ -6676,9 +6644,9 @@ dependencies = [
 
 [[package]]
 name = "parity-db"
-version = "0.3.9"
+version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d121a9af17a43efd0a38c6afa508b927ba07785bd4709efb2ac03bf77efef8d"
+checksum = "b3e7f385d61562f5834282b90aa50b41f38a35cf64d5209b8b05487b50553dbe"
 dependencies = [
  "blake2-rfc",
  "crc32fast",
@@ -7078,7 +7046,7 @@ source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.17#de0e
 dependencies = [
  "derive_more",
  "futures 0.3.21",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "polkadot-erasure-coding",
  "polkadot-node-network-protocol",
@@ -7099,7 +7067,7 @@ version = "0.9.17"
 source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.17#de0ecd4760b146ecf33f5e867d707d789e21e060"
 dependencies = [
  "futures 0.3.21",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "polkadot-erasure-coding",
  "polkadot-node-network-protocol",
@@ -7207,7 +7175,7 @@ source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.17#de0e
 dependencies = [
  "derive_more",
  "futures 0.3.21",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "polkadot-erasure-coding",
  "polkadot-node-network-protocol",
@@ -7303,7 +7271,7 @@ dependencies = [
  "futures 0.3.21",
  "futures-timer",
  "kvdb",
- "lru 0.7.4",
+ "lru 0.7.5",
  "merlin",
  "parity-scale-codec",
  "polkadot-node-jaeger",
@@ -7431,7 +7399,7 @@ source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.17#de0e
 dependencies = [
  "futures 0.3.21",
  "kvdb",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "polkadot-node-primitives",
  "polkadot-node-subsystem",
@@ -7655,7 +7623,7 @@ dependencies = [
  "derive_more",
  "futures 0.3.21",
  "itertools",
- "lru 0.7.4",
+ "lru 0.7.5",
  "metered-channel",
  "parity-scale-codec",
  "pin-project 1.0.10",
@@ -7681,7 +7649,7 @@ source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.17#de0e
 dependencies = [
  "futures 0.3.21",
  "futures-timer",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-util-mem",
  "parking_lot 0.11.2",
  "polkadot-node-metrics",
@@ -8027,7 +7995,7 @@ dependencies = [
  "kusama-runtime",
  "kvdb",
  "kvdb-rocksdb",
- "lru 0.7.4",
+ "lru 0.7.5",
  "pallet-babe",
  "pallet-im-online",
  "pallet-mmr-primitives",
@@ -8189,45 +8157,6 @@ checksum = "eb9f9e6e233e5c4a35559a617bf40a4ec447db2e84c20b55a6f83167b7e57872"
 [[package]]
 name = "precompile-utils"
 version = "0.1.0"
-dependencies = [
- "fp-evm",
- "frame-support",
- "frame-system",
- "log",
- "num_enum",
- "pallet-evm",
- "parity-scale-codec",
- "precompile-utils-macro 0.1.0",
- "sha3 0.9.1",
- "sp-core",
- "sp-io",
- "sp-std",
- "xcm",
-]
-
-[[package]]
-name = "precompile-utils"
-version = "0.1.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.1.0/polkadot-v0.9.17#162d8fcde709d0140bc8da9f7df5ac165c0c43a7"
-dependencies = [
- "fp-evm",
- "frame-support",
- "frame-system",
- "log",
- "num_enum",
- "pallet-evm",
- "parity-scale-codec",
- "precompile-utils-macro 0.1.0 (git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.1.0/polkadot-v0.9.17)",
- "sha3 0.9.1",
- "sp-core",
- "sp-io",
- "sp-std",
- "xcm",
-]
-
-[[package]]
-name = "precompile-utils"
-version = "0.1.0"
 source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.2.0/polkadot-v0.9.17#33e48c2e54109bb5980f8117336c9489f9c20d06"
 dependencies = [
  "fp-evm",
@@ -8266,26 +8195,23 @@ dependencies = [
 ]
 
 [[package]]
-name = "precompile-utils-macro"
+name = "precompile-utils"
 version = "0.1.0"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
 dependencies = [
+ "fp-evm",
+ "frame-support",
+ "frame-system",
+ "log",
  "num_enum",
- "proc-macro2",
- "quote",
- "sha3 0.8.2",
- "syn",
-]
-
-[[package]]
-name = "precompile-utils-macro"
-version = "0.1.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-dapps-staking-3.1.0/polkadot-v0.9.17#162d8fcde709d0140bc8da9f7df5ac165c0c43a7"
-dependencies = [
- "num_enum",
- "proc-macro2",
- "quote",
- "sha3 0.8.2",
- "syn",
+ "pallet-evm",
+ "parity-scale-codec",
+ "precompile-utils-macro 0.1.0 (git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade)",
+ "sha3 0.9.1",
+ "sp-core",
+ "sp-io",
+ "sp-std",
+ "xcm",
 ]
 
 [[package]]
@@ -8304,6 +8230,18 @@ dependencies = [
 name = "precompile-utils-macro"
 version = "0.1.0"
 source = "git+https://github.com/AstarNetwork/astar-frame?tag=pallet-evm-precompile-sr25519-1.0.0/polkadot-v0.9.17#44164de99c064b78a8ac4a093f8b09613b6a08a1"
+dependencies = [
+ "num_enum",
+ "proc-macro2",
+ "quote",
+ "sha3 0.8.2",
+ "syn",
+]
+
+[[package]]
+name = "precompile-utils-macro"
+version = "0.1.0"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
 dependencies = [
  "num_enum",
  "proc-macro2",
@@ -9643,7 +9581,7 @@ dependencies = [
  "linked-hash-map",
  "linked_hash_set",
  "log",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "parking_lot 0.11.2",
  "pin-project 1.0.10",
@@ -9680,7 +9618,7 @@ dependencies = [
  "futures-timer",
  "libp2p",
  "log",
- "lru 0.7.4",
+ "lru 0.7.5",
  "sc-network",
  "sp-runtime",
  "substrate-prometheus-endpoint",
@@ -10350,7 +10288,7 @@ dependencies = [
  "pallet-authorship",
  "pallet-balances",
  "pallet-base-fee",
- "pallet-block-reward 2.0.0",
+ "pallet-block-reward",
  "pallet-collator-selection 3.0.0 (git+https://github.com/paritytech/cumulus?branch=polkadot-v0.9.17)",
  "pallet-collective",
  "pallet-contracts",
@@ -10368,7 +10306,7 @@ dependencies = [
  "pallet-evm-precompile-sr25519",
  "pallet-identity",
  "pallet-multisig",
- "pallet-precompile-dapps-staking",
+ "pallet-precompile-dapps-staking 3.2.0",
  "pallet-randomness-collective-flip",
  "pallet-session",
  "pallet-sudo",
@@ -10423,7 +10361,7 @@ dependencies = [
  "pallet-authorship",
  "pallet-balances",
  "pallet-base-fee",
- "pallet-block-reward 2.0.0",
+ "pallet-block-reward",
  "pallet-collator-selection 3.0.0 (git+https://github.com/paritytech/cumulus?branch=polkadot-v0.9.17)",
  "pallet-collective",
  "pallet-custom-signatures",
@@ -10438,7 +10376,7 @@ dependencies = [
  "pallet-evm-precompile-sr25519",
  "pallet-identity",
  "pallet-multisig",
- "pallet-precompile-dapps-staking",
+ "pallet-precompile-dapps-staking 3.2.0",
  "pallet-session",
  "pallet-sudo",
  "pallet-timestamp",
@@ -10707,7 +10645,7 @@ source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.17#22
 dependencies = [
  "futures 0.3.21",
  "log",
- "lru 0.7.4",
+ "lru 0.7.5",
  "parity-scale-codec",
  "parking_lot 0.11.2",
  "sp-api",
