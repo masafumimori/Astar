@@ -5803,7 +5803,7 @@ dependencies = [
 [[package]]
 name = "pallet-dapps-staking"
 version = "3.2.1"
-source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#7c91d160926d5077a513791619394956da2a2908"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -6250,7 +6250,7 @@ dependencies = [
 [[package]]
 name = "pallet-precompile-dapps-staking"
 version = "3.2.1"
-source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#7c91d160926d5077a513791619394956da2a2908"
 dependencies = [
  "fp-evm",
  "frame-support",
@@ -8197,7 +8197,7 @@ dependencies = [
 [[package]]
 name = "precompile-utils"
 version = "0.1.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#7c91d160926d5077a513791619394956da2a2908"
 dependencies = [
  "fp-evm",
  "frame-support",
@@ -8241,7 +8241,7 @@ dependencies = [
 [[package]]
 name = "precompile-utils-macro"
 version = "0.1.0"
-source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#1481cdcb0d494b693dbdd7c74fd200c0b9b9ba77"
+source = "git+https://github.com/AstarNetwork/astar-frame?branch=feature/astar-festival-end-cleanup-upgrade#7c91d160926d5077a513791619394956da2a2908"
 dependencies = [
  "num_enum",
  "proc-macro2",
